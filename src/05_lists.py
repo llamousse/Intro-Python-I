@@ -5,7 +5,6 @@ x = [1, 2, 3]
 y = [8, 9, 10]
 
 # For the following, DO NOT USE AN ASSIGNMENT (=).
-
 # Change x so that it is [1, 2, 3, 4]
 # YOUR CODE HERE 
 print(x)
