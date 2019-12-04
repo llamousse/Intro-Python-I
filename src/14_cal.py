@@ -22,3 +22,17 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+userDateInput = input("Please provide a month and year in this format (m,y): ").split(',')
+
+def get_calendar(m=datetime.now().month, y=datetime.now().year):
+  calendar.setfirstweekday(calendar.SUNDAY)
+  return calendar.monthcalendar(y, m)
+
+def calendarSpecs(userDateInput):
+  if (userDateInput.len() == 2):
+    get_calendar(userDateInput[0], userDateInput[1])
+  elif (userDateInput.len() == 0):
+    get_calendar(userDateInput[0], datetime.now().year)
+  else:
+    print(f"Arguments need to be provided for this to work. Try again!")
